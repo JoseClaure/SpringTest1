@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/securecapita
+    password: UEadmin$123
+    username: usuarioue
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8InnoDBDialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format-sql: true
+  sql:
+    init:
+      mode: always
+      continue-on-error: false
+logging:
+  level:
+    org:
+      springframework: DEBUG
+#logging.level.org.springframework=DEBUG
